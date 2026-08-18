@@ -39,6 +39,7 @@ export const clubSettings = pgTable("club_settings", {
   slotDurationMinutes: integer("slot_duration_minutes").default(90).notNull(),
   paymentTrackingEnabled: boolean("payment_tracking_enabled").default(false).notNull(),
   timezone: text("timezone").default("Europe/Madrid").notNull(),
+  setupCompletedAt: timestamp("setup_completed_at", { withTimezone: true }),
   ...timestamps,
 }, (table) => [uniqueIndex("club_settings_club_unique").on(table.clubId)]);
 

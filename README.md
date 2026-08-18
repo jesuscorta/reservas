@@ -8,7 +8,7 @@ Aplicación interna multi-tenant para gestionar las pistas de un club de pádel.
 2. Ejecuta la migración `src/db/migrations/0000_initial.sql` contra esa base (en Neon SQL Editor o con `psql`).
 3. Instala dependencias con `npm install`.
 4. Inicia el proyecto con `npm run dev`.
-5. Ejecuta `npm run db:seed` para crear dos clubes de ejemplo. El código de ambos es `1234`.
+5. Ejecuta `npm run db:seed` para crear el superadmin y, después, crea el primer club desde `/superadmin`.
 
 ## Comandos
 
@@ -17,6 +17,7 @@ Aplicación interna multi-tenant para gestionar las pistas de un club de pádel.
 - `npm test`: pruebas de dominio.
 - `npm run build`: build de producción.
 - `npm run db:generate`: genera migraciones Drizzle tras cambios de esquema.
+- `npm run db:clean-demo`: elimina únicamente los clubes demo heredados `demo-padel` y `padel-sierra`.
 
 ## Despliegue
 
